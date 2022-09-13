@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Dashboard</title>
+</head>
+<body>
+  <main class="container">
+
+    <form action="#" method="get" id="form-weather">
+      <div class="grid">
+
+        <label for="address">
+          Выберите город для построения графика:
+          <select id="search" name="address" required>
+            <option value="" selected>Выберите город…</option>
+            <option value="Moscow">Москва</option>
+            <option value="Berlin">Берлин</option>
+          </select>
+        </label>
+
+        <label for="type-chart">
+          Тип графика:
+          <select id="type" name="type-chart" required>
+            <option value="" selected>Выберите тип…</option>
+            <option value="temperature_2m">Температура</option>
+            <option value="windspeed_10m">Скорость ветра</option>
+          </select>
+        </label>
+
+      </div>
+
+      <button type="submit">Построить график</button>
+    </form>
+
+    <article>
+      <canvas id="chart" width="400" height="200"></canvas>
+    </article>
+
+  </main>
+</body>
+</html>
